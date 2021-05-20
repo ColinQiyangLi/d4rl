@@ -228,9 +228,9 @@ class MazeEnv(gym.Env):
     row, col = rowcol
     x = col * self._maze_size_scaling - self._init_torso_x
     y = row * self._maze_size_scaling - self._init_torso_y
-    if add_random_noise:
-      x = x + np.random.uniform(low=0, high=self._maze_size_scaling * 0.25)
-      y = y + np.random.uniform(low=0, high=self._maze_size_scaling * 0.25)
+    # if add_random_noise:
+    #   x = x + np.random.uniform(low=0, high=self._maze_size_scaling * 0.25)
+    #   y = y + np.random.uniform(low=0, high=self._maze_size_scaling * 0.25)
     return (x, y)
 
   def goal_sampler(self, np_random, only_free_cells=True, interpolate=True):
